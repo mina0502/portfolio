@@ -1,0 +1,72 @@
+{% extends "layout.html"%}
+
+{%block title%}
+{%if request.endpoint=='public_list'%}
+    All List
+{%else%}
+    My List
+{%endif%}
+{%endblock%}
+
+{%block body%}
+    <h2>{{self.title()}}</h2>
+{%if g.user%}
+    {%if request.endpoint == 'user_list'%}
+        <div class= followstatus>
+            {%if g.user.user_id==profile_user.user_id%}
+            My List
+            {%elif followed%}
+            You are Following
+                <a class="unfollow" href="{{url_for('unfollow_user',username=profile_user.username)}}">unfollow</a>
+            {% else %}
+            You are not Follow
+                <a class="follow" href="{{url_for('follow_user',username=profile_user.username)}}">follow</a>
+            {%endif%}
+        </div>
+    {% elif request.endpoint=='my_list' %}
+    <div class = box>
+    <h3>Write Your Massage</h3>
+    <form action="{{url_for('add_message') }}" method=post>
+        <p>
+            <input type="text" name="text" size=60>
+            <input type="submit" value="Share">
+        </p>
+    </form>
+    </div>
+    {%endif%}
+{%endif%}
+    <ul class="messages">
+        {%for message in messages %}
+        <li><img src={{message.email | gravatar(size=48)}}/>
+            <p>
+                <strong><a href="{{url_for('user_list',username=message.username)}}">{{message.username}}</a></strong>
+                {{message.text}}
+                <small>&mdash;{{message.pub_date | datetimeformat}}</small>
+                
+                {%if request.endpoint!='public_list'%}
+                
+                    {%if error%}
+                        <div class=error><strong>Error: </strong>{{error}}</div>
+                    {%endif%}
+
+                    <form action="{{url_for('del_message',message_id=message.message_id)}}" method=post>
+                        <input type="submit" name="del" value="Delete">
+                    </form>
+                {%endif%}
+            </p>
+        </li>
+        {%else%}
+        <li>Not exists Meassage</li>
+        {% endfor%}
+    </ul>
+    {%if request.endpoint == 'my_list'%}
+     {% for idx in range(10) %}
+    <button><a href="/page/{{idx}}">{{idx+1}}</a></button>
+    {%endfor%}
+    {%else%}
+    {% for idx in range(10) %}
+    <button><a href="/public/page/{{idx}}">{{idx+1}}</a></button>
+    {%endfor%}
+    {%endif%}
+
+{%endblock%}

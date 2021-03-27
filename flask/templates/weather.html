@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+{% block title %}weather{%endblock%}
+{%block body%}
+<h2>{{self.title()}}</h2>
+		<form action="{{url_for('all') }}" method=post>
+            <button>전국</button>
+    	</form>
+
+    	<form action="{{url_for('seoul') }}" method=post>
+            <button>서울・경기도</button>
+   		</form>
+
+   		<form action="{{url_for('gangwon') }}" method=post>
+            <button>강원도</button>
+   		</form>
+
+   		<form action="{{url_for('chungbuk') }}" method=post>
+            <button>충청북도</button>
+   		</form>
+
+   		<form action="{{url_for('chungnam') }}" method=post>
+            <button>충청남도</button>
+   		</form> 
+
+      <br/><br/>
+		  <form action="{{url_for('jeollabuk') }}" method=post>
+            <button>전라북도</button>
+   		</form>
+
+   		<form action="{{url_for('jeollanam') }}" method=post>
+            <button>전라남도</button>
+   		</form>
+
+   		<form action="{{url_for('gyeongbuk') }}" method=post>
+            <button>경상북도</button>
+   		</form>
+
+   		<form action="{{url_for('gyeongnam') }}" method=post>
+            <button>경상남도</button>
+   		</form>
+    	
+    	<form action="{{url_for('jeju') }}" method=post>
+            <button>제주도</button>
+   		</form>
+    	<br/><br/>
+    {%for weather in info.keys() %}
+    	<b>**{{weather}} -</b>
+    	{%for name in info[weather]%}
+    	 {{name}}
+    	{%endfor%}
+    	<br/><br/>
+    {%endfor%}
+    <br/><p style="text-align:right;color:#cc01a1;"><b>출처 - 기상청 날씨누리</b></p>
+	<p style="text-align:right;color:#000000;"><b>기준 -당일 00시</b></p><br/>
+{%endblock%}
