@@ -1,4 +1,3 @@
-
 table{
 			margin: 10px 0px 0px 10px;
 		}
@@ -8,13 +7,13 @@ table{
 		p{
 			text-align: left;
 		}
-		div{
+		.container{
 			font-size: 1.5em;
 			display: none;
 		}
 		body { 
 			background: linear-gradient( to top, white, #696969 ); 
-			background-repeat: no-repeat;
+			background-repeat: all;
 			background-image: url('https://raw.githubusercontent.com/mina0502/web/main/img/walll.jpg'); 
 			}
 		ul,ol{

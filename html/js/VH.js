@@ -4,21 +4,25 @@
 	var iot = false;
 	var arduino = false;
 	var jsp = false;
+	var profile= false;	
+
 	function func()
 	{
-		if(unity==true)
+		if(profile==true)
 		{
-			document.getElementById("unity").style.display="none";
-			unity=false;
+			document.getElementById("profile").style.display="none";
+			profile=false;
 			return;
 		}
 		else
 		{
-			document.getElementById("unity").style.display="block";
-			unity=true;
+			document.getElementById("profile").style.display="block";
+			profile=true;
 			return;
 		}
 	}
+
+
 
 	function func1()
 	{
@@ -54,6 +58,22 @@
 
 	function func3()
 	{
+		if(jsp==true)
+		{
+			document.getElementById("jsp").style.display="none";
+			jsp=false;
+			return;
+		}
+		else
+		{
+			document.getElementById("jsp").style.display="block";
+			jsp=true;
+			return;
+		}
+	}
+
+	function func4()
+	{
 		if(iot==true)
 		{
 			document.getElementById("iot").style.display="none";
@@ -68,7 +88,8 @@
 		}
 	}
 
-	function func4()
+	
+	function func5()
 	{
 		if(arduino==true)
 		{
@@ -84,18 +105,18 @@
 		}
 	}
 
-	function func5()
+		function func6()
 	{
-		if(jsp==true)
+		if(unity==true)
 		{
-			document.getElementById("jsp").style.display="none";
-			jsp=false;
+			document.getElementById("unity").style.display="none";
+			unity=false;
 			return;
 		}
 		else
 		{
-			document.getElementById("jsp").style.display="block";
-			jsp=true;
+			document.getElementById("unity").style.display="block";
+			unity=true;
 			return;
 		}
 	}
