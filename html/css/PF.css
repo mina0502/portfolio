@@ -14,8 +14,11 @@ table{
 		body { 
 			background: linear-gradient( to top, white, #696969 ); 
 			background-repeat: all;
-			background-image: url('https://raw.githubusercontent.com/mina0502/web/main/img/walll.jpg'); 
+			background-image: url('https://raw.githubusercontent.com/mina0502/web/main/img/nordwood.jpg'); 
 			}
-		ul,ol{
-			color: white;
+		ul,ol,div font{
+			color: default;
+			font-family: arial;
 		}
+
+		
