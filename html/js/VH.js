@@ -4,13 +4,12 @@
 	var jsp = false;
 	var iot = false;
 	var arduino = false;
-	var unity = false;
-	var test=["unity","html","flask","iot","arduino","jsp","profile"];
+	var test=["html","flask","iot","arduino","jsp","profile"];
 
 
 	function switchOff()
 	{
-		for(var i=0;i<7;i++)
+		for(var i=0;i<6;i++)
 		{
 			document.getElementById(test[i]).style.display="none";
 			unity=html=flask=iot=arduino=jsp=profile=false;
@@ -101,20 +100,6 @@
 				switchOff();
 				document.getElementById(val).style.display="block";
 				arduino=true;
-			}
-		}
-
-		if(val=='unity')
-		{
-			if(unity==true)
-			{
-				switchOff();
-			}
-			else
-			{
-				switchOff();
-				document.getElementById(val).style.display="block";
-				unity=true;
 			}
 		}
 
