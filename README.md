@@ -8,6 +8,10 @@
 
 [jsp](https://github.com/mina0502/portfolio/tree/main/jsp)
 
+[iot](https://github.com/mina0502/portfolio/tree/main/iot)
+
+[arduino](https://github.com/mina0502/portfolio/tree/main/arduino)
+
 ![img](https://user-images.githubusercontent.com/54879715/112710570-8d1c9080-8f05-11eb-8e5b-719ae93b8f89.png)
 
 |닉네임|이메일|
