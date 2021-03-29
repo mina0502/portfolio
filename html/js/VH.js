@@ -12,7 +12,7 @@
 		for(var i=0;i<6;i++)
 		{
 			document.getElementById(test[i]).style.display="none";
-			unity=html=flask=iot=arduino=jsp=profile=false;
+			html=flask=iot=arduino=jsp=profile=false;
 		}
 	}
 	
