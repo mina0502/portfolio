@@ -1,122 +1,124 @@
-	var unity = false;
+	var profile= false;	
 	var html = false;
 	var flask = false;
+	var jsp = false;
 	var iot = false;
 	var arduino = false;
-	var jsp = false;
-	var profile= false;	
+	var unity = false;
+	var test=["unity","html","flask","iot","arduino","jsp","profile"];
 
-	function func()
+
+	function switchOff()
 	{
-		if(profile==true)
+		for(var i=0;i<7;i++)
 		{
-			document.getElementById("profile").style.display="none";
-			profile=false;
-			return;
-		}
-		else
-		{
-			document.getElementById("profile").style.display="block";
-			profile=true;
-			return;
+			document.getElementById(test[i]).style.display="none";
+			unity=html=flask=iot=arduino=jsp=profile=false;
 		}
 	}
-
-
-
-	function func1()
-	{
-		if(html==true)
-		{
-			document.getElementById("html").style.display="none";
-			html=false;
-			return;
-		}
-		else
-		{
-			document.getElementById("html").style.display="block";
-			html=true;
-			return;
-		}
-	}
-
-	function func2()
-	{
-		if(flask==true)
-		{
-			document.getElementById("flask").style.display="none";
-			flask=false;
-			return;
-		}
-		else
-		{
-			document.getElementById("flask").style.display="block";
-			flask=true;
-			return;
-		}
-	}
-
-	function func3()
-	{
-		if(jsp==true)
-		{
-			document.getElementById("jsp").style.display="none";
-			jsp=false;
-			return;
-		}
-		else
-		{
-			document.getElementById("jsp").style.display="block";
-			jsp=true;
-			return;
-		}
-	}
-
-	function func4()
-	{
-		if(iot==true)
-		{
-			document.getElementById("iot").style.display="none";
-			iot=false;
-			return;
-		}
-		else
-		{
-			document.getElementById("iot").style.display="block";
-			iot=true;
-			return;
-		}
-	}
-
 	
-	function func5()
+
+	function func(val)
 	{
-		if(arduino==true)
+		if(val=='profile')
 		{
-			document.getElementById("arduino").style.display="none";
-			arduino=false;
-			return;
+			if(profile==true)
+			{
+				switchOff();
+			}
+			else
+			{
+				switchOff();
+				document.getElementById(val).style.display="block";
+				profile=true;
+			}
 		}
-		else
+
+		if(val=='html')
 		{
-			document.getElementById("arduino").style.display="block";
-			arduino=true;
-			return;
+			if(html==true)
+			{
+				switchOff();
+			}
+			else
+			{
+				switchOff();
+				document.getElementById(val).style.display="block";
+				html=true;
+			}
 		}
+
+		if(val=='flask')
+		{
+			if(flask==true)
+			{
+				switchOff();
+			}
+			else
+			{
+				switchOff();
+				document.getElementById(val).style.display="block";
+				flask=true;
+			}
+		}
+
+		if(val=='jsp')
+		{
+			if(jsp==true)
+			{
+				switchOff();
+			}
+			else
+			{
+				switchOff();
+				document.getElementById(val).style.display="block";
+				jsp=true;
+			}
+		}
+
+		if(val=='iot')
+		{
+			if(iot==true)
+			{
+				switchOff();
+			}
+			else
+			{
+				switchOff();
+				document.getElementById(val).style.display="block";
+				iot=true;
+			}
+		}
+
+		if(val=='arduino')
+		{
+			if(arduino==true)
+			{
+				switchOff();
+			}
+			else
+			{
+				switchOff();
+				document.getElementById(val).style.display="block";
+				arduino=true;
+			}
+		}
+
+		if(val=='unity')
+		{
+			if(unity==true)
+			{
+				switchOff();
+			}
+			else
+			{
+				switchOff();
+				document.getElementById(val).style.display="block";
+				unity=true;
+			}
+		}
+
 	}
 
-		function func6()
-	{
-		if(unity==true)
-		{
-			document.getElementById("unity").style.display="none";
-			unity=false;
-			return;
-		}
-		else
-		{
-			document.getElementById("unity").style.display="block";
-			unity=true;
-			return;
-		}
-	}
+
+
