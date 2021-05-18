@@ -74,21 +74,21 @@ if(my_id==null)
 	{
 %>
           <input class="btn btn-danger"type="button" value="삭제하기" 
-                onclick=" location.href='../rvdrama/deleteReview.jsp?num=<%=rb.getNum()%>&title=<%=title%>';"
+                onclick=" location.href='../rvdrama/deleteReview.jsp?num=<%=num%>&title=<%=title%>';"
           >
           <input class="btn btn-warning" type="button" value="수정하기" 
-                 onclick="location.href='../rvdrama/updateForm.jsp?num=<%=rb.getNum()%>';"
+                 onclick="location.href='../rvdrama/updateForm.jsp?num=<%=num%>';"
           >
 <%}
 	else if(!my_id.equals("")||my_id.equals("admin"))
 	{%>
 			<input class="btn btn-success" type="button" value="답글쓰기" 
-                onclick="location.href='../rvdrama/reWriteForm.jsp?num=<%=rb.getNum()%>&title=<%=title%>';">
+                onclick="location.href='../rvdrama/reWriteForm.jsp?num=<%=num%>&title=<%=title%>';">
 		<%if(my_id.equals("admin"))
 		{
 		%>
 		          <input class="btn btn-danger"type="button" value="삭제하기" 
-                onclick=" location.href='../rvdrama/deleteReview.jsp?num=<%=rb.getNum()%>&title=<%=title%>';"
+                onclick=" location.href='../rvdrama/deleteReview.jsp?num=<%=num%>&title=<%=title%>';"
           >
         <%} %>
 <%}%>

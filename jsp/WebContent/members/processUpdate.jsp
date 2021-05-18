@@ -41,8 +41,7 @@ public String UpdateCheck(String pw, String mail){
 	
 	AES256Util secure=new AES256Util();
 	String hpw= secure.encrypt(pw);
-	String hphone= secure.encrypt(phone);
-	String hmail = secure.encrypt(mail);
+
 	
 	boolean check = false;
 	DramaDAO dd = new DramaDAO();
@@ -51,7 +50,7 @@ public String UpdateCheck(String pw, String mail){
 	{
 		if(dd.UpdateMemberCheck(id))
 		{
-			dd.UpdateMember(hpw, hmail, hphone, address, id);
+			dd.UpdateMember(hpw, mail, phone, address, id);
 			check=true;
 		}
 	}
@@ -59,7 +58,7 @@ public String UpdateCheck(String pw, String mail){
 	{
 		if(dd.UpdateMemberCheck(id))
 		{
-			dd.UpdatePWMember(hpw, hphone, address, id); 
+			dd.UpdatePWMember(hpw, phone, address, id); 
 			check=true;
 		}
 	}
@@ -67,7 +66,7 @@ public String UpdateCheck(String pw, String mail){
 	{
 		if(dd.UpdateMemberCheck(id))
 		{
-			dd.UpdateMailMember(hmail, hphone, address, id);
+			dd.UpdateMailMember(mail, phone, address, id);
 			check=true;
 		}
 	}
@@ -75,7 +74,7 @@ public String UpdateCheck(String pw, String mail){
 	{
 		if(dd.UpdateMemberCheck(id))
 		{
-			dd.UpdateMember(hphone, address, id);
+			dd.UpdateMember(phone, address, id);
 			check=true;
 		}
 	}

@@ -26,11 +26,8 @@ if(my_id==null)
 <body>
 <%
 	DramaDAO dd = new DramaDAO();
-	if(!my_id.equals(id))
-	{
-		dd.updateViewcount(num);
-	}
-	ReviewDramaBean rb=dd.getReviewList(id, title);
+
+	ReviewDramaBean rb=dd.getReviewList(id, title,num);
 		
 %>
 <jsp:include page="../main/menu.jsp" flush="false"/>

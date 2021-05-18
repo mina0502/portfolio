@@ -26,7 +26,7 @@
 					pageno = 1;
 				}
 /**************DramaDAO--> getTotal_record	************/
-			int total_record= dd.getRpNum(title);
+			int total_record= dd.getRpNum(title,Integer.parseInt(num));
 /******************************************************************/
 				
 				int BtnSize = 10;
@@ -75,7 +75,7 @@
 								<th colspan="20%">날짜</th>
 							</tr>
 	<%
-	ArrayList ReviewList = dd.getRpList(PageSize,record_start_no,title);
+	ArrayList ReviewList = dd.getRpList(PageSize,record_start_no,title,Integer.parseInt(num));
 	for(int i=0; i<ReviewList.size();i++)
 	{
 		ReviewDramaBean rb =(ReviewDramaBean) ReviewList.get(i);

@@ -19,7 +19,6 @@
 					}
 					%>
 <%
-
  	Document doc2 = Jsoup.connect("http://www.kma.go.kr/weather/forecast/mid-term-rss3.jsp?stnId=108").get();
 	Elements local = doc2.select("location");
 	Elements time = local.select("tmEf");
@@ -32,10 +31,11 @@
 	
 	arrList(arrTime,time.text().replace(":00 ", ":00/").split("/"));
 	arrList(arrCity,city.text().split(" "));
-	arrAllList(arrWf,wf.text().replace("리고 비","리고_비").replace(" ","/").split("/"));
+	arrAllList(arrWf,wf.text().replace("고 비","고_비").replace(" ","/").split("/"));
 
 	int cnt=0;
 %>
 <%=arrTime%>
 <%=arrCity%>
 <%=arrWf%>
+
