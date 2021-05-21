@@ -6,7 +6,7 @@
 
 [flask](https://github.com/mina0502/portfolio/tree/main/flask)
 
-[jsp](https://github.com/mina0502/portfolio/tree/main/jsp)
+[jsp](https://github.com/mina0502/portfolio/tree/main/Drama)
 
 [iot](https://github.com/mina0502/portfolio/tree/main/iot)
 
